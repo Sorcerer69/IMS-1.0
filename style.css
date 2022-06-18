@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+
+body {
+    background-color: #fcfcfc;
+    transition: background-color .5s;
+    margin: 0px 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Stylesheet for sliding navigation bar.  */
+.sidenav {
+    height: 100%;
+    width: 0;
+    transition: 0.7s; 
+    position: fixed;
+    z-index: 1;
+    background-color: rgb(19, 18, 18);
+    overflow: hidden;
+    padding-top: 10px;
+    top: 0;
+    left: 0; /* Left equals zero here so that the navigation bar is positioned at right. */
+}
+
+.close {
+    text-decoration: none;
+    font-size: 45px;
+    color: rgb(255, 255, 255);
+    padding-left: 10%;
+    /* padding-bottom: 200rem; */
+}
+
+.close:hover {
+    color: rgb(175, 175, 175);
+}
+
+.menu {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    padding: 10px 100px 19px 50px;
+    display: block;
+    transition-delay: 0.3s ease-out; /* Transition delays the action according to the specified time, therefore an animation takes place. */
+}
+
+.menu:hover {
+    color: rgb(175, 175, 175);
+}
+
+i {
+    width: 35px;
+}
+
+.openSideNav {
+    background-color: rgb(19, 18, 18);
+    overflow: auto;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    position: fixed;
+    top: 0;
+    height: 4.5rem;
+    width: 100%;
+    box-shadow:0 4px 8px 0 rgb(0 0 0 / 40%), 0 6px 20px 0 rgb(0 0 0 / 39%);
+}
+
+span:hover {
+    opacity: 80%;
+}
+
+#main {
+    transition: margin-left 0.3s ease-out;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px;
+    margin: 100px 20px 20px 20px;
+    padding: 10px 30px;
+}
+
+.image {
+    width: 300px;
+    height: 200px;
+}
+
+.hide {
+    display: none;
+    /* Initially hides both images.  */
+}
+
+button:hover {
+    background-color: rgb(196, 196, 196);
+}
+
+/* Stylesheet for footer.  */
+.footer {
+    /* margin-top: auto; */
+    position: absolute;
+    width: 100%;
+    margin-bottom: 0;
+    bottom: 0;
+    
+}
+
+center {
+    margin: 0;
+    background-color: rgb(19, 18, 18); 
+    padding: 20px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    bottom: 0;
+}
+
+.icons a {
+    text-decoration: none;
+    padding: 15px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.icons a:hover {
+    opacity: 70%;
+}
+
+/* Background-colors and icon colors for every icon.  */
+.fa-facebook {
+    background-color: rgb(66 103 178);
+    color: white;
+}
+
+.fa-instagram {
+    background-color: #ff0022c4;
+    color: white;
+}
+
+.fa-linkedin {
+    background-color: #0072b1;
+    color: white;
+}
+
+.fa-google {
+    background-color: #4285F4;
+    color: white;
+}
+
+/* Section to place all the contents of the webpage. */
+.body {
+    background-color: rgb(5, 197, 255);
+    margin: 100px 100px 20px 100px;
+    padding:10px 30px;
+    border-radius: 25px;
+} 
+
+
+/* CSS for CV.  */
+.mainTable {
+    margin: auto;
+    padding: auto;
+    background-color: white;
+}
+
+.academic {
+    padding: 10px 10px; 
+    background-color: rgb(227, 236, 89);
+}
+
+.personalInfo {
+    padding: 10px 12px 10px 30px;
+    width: 100%;
+}
+
+
+/* CSS for Contact page.  */
+.contact {
+    background-color: rgb(5, 197, 255);
+    margin: 100px 50px 20px 50px;
+    padding:10px 80px;
+    border-radius: 25px; /* Makes the corners rounded. */
+    font-family: Arial, Helvetica, sans-serif;
+} 
+
+.content {
+    margin-left: 30px;
+}
+
+/* CSS for research page.  */
+.flexBox {
+    display: flex;
+}
+
+.leftColumn {
+    flex: 50%;
+    padding: 12px 10px;
+}
+
+.rightColumn {
+    flex: 50%;
+    padding: 12px 10px;
+}
+
+.sample {
+    background-color:rgb(19, 18, 18) ;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    border-radius: 25px;
+}
+
+.sources {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
