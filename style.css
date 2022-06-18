@@ -2,56 +2,96 @@
 
 body {
     background-color: #fcfcfc;
-    transition: background-color .5s;
+    /* transition: background-color .5s; */
     margin: 0px 0px;
     font-family: 'Poppins', sans-serif;
 }
 
 /* Stylesheet for sliding navigation bar.  */
-.sidenav {
-    height: 100%;
-    width: 0;
-    transition: 0.7s; 
+
+/* new sidebar */
+
+aside{
+    display:block;
+}
+.sideBar{
+   
     position: fixed;
-    z-index: 1;
-    background-color: rgb(19, 18, 18);
-    overflow: hidden;
-    padding-top: 10px;
     top: 0;
-    left: 0; /* Left equals zero here so that the navigation bar is positioned at right. */
+    left: 0;
+    bottom: 0;
+    width: 0;
+    z-index: 996;
+    transition: all 0.3s;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #aab7cf transparent;
+    box-shadow: 0px 0px 20px rgb(1 41 112 / 5%);
+    background-color: #3E6990
 }
 
-.close {
-    text-decoration: none;
-    font-size: 45px;
-    color: rgb(255, 255, 255);
-    padding-left: 10%;
-    /* padding-bottom: 200rem; */
+.sidebar-nav{
+    padding: 0;
+    margin: 0;
+    list-style: no
 }
 
-.close:hover {
-    color: rgb(175, 175, 175);
+.sidebar-nav .nav-item {
+    margin-bottom: 5px
 }
 
-.menu {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 17px;
-    padding: 10px 100px 19px 50px;
+
+.sidebar-nav li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent
+}
+
+ul {
     display: block;
-    transition-delay: 0.3s ease-out; /* Transition delays the action according to the specified time, therefore an animation takes place. */
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
 }
 
-.menu:hover {
-    color: rgb(175, 175, 175);
+
+.sidebar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+    font-weight: 600;
+    color: white;
+    transition: 0.3;
+    padding: 13px 15px;
+    border-radius: 4px;
+}
+.nav-link {
+    display: block;
+    /* padding: .5rem 1rem; */
+
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
 
-i {
-    width: 35px;
+.sideBar ul{
+    padding: 20px;
+}
+
+.nav-link i{
+    width: 40px;
 }
 
 .openSideNav {
-    background-color: rgb(19, 18, 18);
+    background-color: #3E6990;
     overflow: auto;
     margin-top: 0;
     margin-bottom: 20px;
@@ -61,6 +101,18 @@ i {
     height: 4.5rem;
     width: 100%;
     box-shadow:0 4px 8px 0 rgb(0 0 0 / 40%), 0 6px 20px 0 rgb(0 0 0 / 39%);
+}
+
+.close {
+    text-decoration: none;
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    padding-left: 8%;
+    /* padding-bottom: 200rem; */
+}
+
+.close:hover {
+    color: rgb(175, 175, 175);
 }
 
 span:hover {

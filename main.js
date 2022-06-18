@@ -1,14 +1,13 @@
 // Sides in the side navigation bar by increasing its width. 
 function openNav() {
-    document.getElementById("sidenav").style.display="absolute";
-    document.getElementById("sidenav").style.width = "300px";       //sets the width of sidenav to 300px.
-    document.getElementById("main").style.marginLeft = "300px";    //sets the right margin of main to 300px (slides the web page to show pushing effect).
+    document.getElementById("sideBar").style.width = "350px";       //sets the width of sidenav to 300px.
+    document.getElementById("main").style.marginLeft = "350px";    //sets the right margin of main to 300px (slides the web page to show pushing effect).
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";        //changes background color to show opacity effect.
 }
 
 // Closes the side navigation bar bar by setting its width to zero. 
 function closeNav() {
-    document.getElementById("sidenav").style.width = "0";       //sets the width of sidenav to 0(hides the side navigation bar). 
+    document.getElementById("sideBar").style.width = "0";       //sets the width of sidenav to 0(hides the side navigation bar). 
     document.getElementById("main").style.marginLeft = "50px";    //sets the right margin of main to 0.
     document.body.style.backgroundColor = "#fcfcfc";            //changes the background color of body back to normal.
 }
