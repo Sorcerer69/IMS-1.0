@@ -113,23 +113,11 @@ ul {
   color: rgb(175, 175, 175);
 }
 
-.dropdown-action {
-    left: 0;
-    margin-left: 95%;
-    width: 250px;
-    
-}
-
-#dropdown-action {
-    checked: unche
-}
-
 .user {
   display: inline;
   float: right;
-  /* margin: 0.2rem 1rem 0 0; */
+  margin: 1rem 1rem 0 0;
   padding: auto 1rem auto 0;
-  margin-right: 1rem;
   color: white;
   font-size: 25px;
   cursor: pointer;
@@ -140,14 +128,10 @@ ul {
   font-size: 22px;
 }
 
-.user-menu ul li {
-  list-style: none;
-}
-
 .dropdown-menu {
   list-style: none;
   font-size: 17px;
-  display: none;
+  left: 0;
 }
 
 .dropdown-menu a {
@@ -159,11 +143,42 @@ ul {
   width: 20px;
 }
 
-.openSideNav .user-menu .dropdown {
-    color: red;
+hr {
+  color: white;
+  background-color: white;
+  height: 0px;
 }
 
-span:hover, i:hover{
+#dropdown {
+  display: none;
+  background-color: red;
+  width: 19%;
+  z-index: 1;
+  position: absolute;
+  top: 69px;
+  right: 1.1rem;
+  /* width: 16px;
+  height: 16px;
+  background-color: red;
+  border-top-left-radius: 3px;
+  position: absolute;
+  top: -8px;
+  right: 19px;
+  transform: rotate(45deg); */
+}
+
+#dropdown ul {
+  left: 0;
+}
+
+#dropdown .user-intro {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+span:hover,
+i:hover {
   opacity: 80%;
 }
 
@@ -173,29 +188,6 @@ span:hover, i:hover{
   margin: 0px 0px;
   margin: 100px 20px 20px 20px;
   padding: 10px 30px;
-}
-
-.image {
-  width: 300px;
-  height: 200px;
-}
-
-.hide {
-  display: none;
-  /* Initially hides both images.  */
-}
-
-button:hover {
-  background-color: rgb(196, 196, 196);
-}
-
-/* Stylesheet for footer.  */
-.footer {
-  /* margin-top: auto; */
-  position: absolute;
-  width: 100%;
-  margin-bottom: 0;
-  bottom: 0;
 }
 
 center {
@@ -220,192 +212,114 @@ center {
   opacity: 70%;
 }
 
-/* Background-colors and icon colors for every icon.  */
-.fa-facebook {
-  background-color: rgb(66 103 178);
-  color: white;
+/* login and register page */
+.wrapper {
+  margin-top: 2%;
+  max-width: 390px;
+  background: #fff;
+  padding: 30px;
+  width: 390px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
 }
 
-.fa-instagram {
-  background-color: #ff0022c4;
-  color: white;
+.wrapper .title-text {
+  display: flex;
+  width: 200%;
 }
 
-.fa-linkedin {
-  background-color: #0072b1;
-  color: white;
+#signUp {
+  display: none;
 }
 
-.fa-google {
-  background-color: #4285f4;
-  color: white;
+.wrapper .title-text .title {
+  width: 50%;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
 }
 
-/* Section to place all the contents of the webpage. */
-.body {
-  background-color: rgb(5, 197, 255);
-  margin: 100px 100px 20px 100px;
-  padding: 10px 30px;
-  border-radius: 25px;
-}
-
-/* CSS for CV.  */
-.mainTable {
-  margin: auto;
-  padding: auto;
-  background-color: white;
-}
-
-.academic {
-  padding: 10px 10px;
-  background-color: rgb(227, 236, 89);
-}
-
-.personalInfo {
-  padding: 10px 12px 10px 30px;
+.wrapper .form-contianer {
   width: 100%;
+  overflow: hidden;
 }
 
-/* CSS for Contact page.  */
-.contact {
-  background-color: rgb(5, 197, 255);
-  margin: 100px 50px 20px 50px;
-  padding: 10px 80px;
-  border-radius: 25px; /* Makes the corners rounded. */
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.content {
-  margin-left: 30px;
-}
-
-/* CSS for research page.  */
-.flexBox {
+.form-contianer .frontface {
   display: flex;
 }
 
-.leftColumn {
-  flex: 50%;
-  padding: 12px 10px;
+.backface {
+  display: none;
 }
 
-.rightColumn {
-  flex: 50%;
-  padding: 12px 10px;
+.form-contianer .frontface form {
+  width: 50%;
 }
 
-.sample {
-  background-color: rgb(19, 18, 18);
-  padding: 10px;
-  margin-top: 10px;
-  color: white;
-  border-radius: 25px;
+.backface form {
+  width: 100%;
 }
 
-.sources {
-  text-decoration: none;
-  color: white;
+.frontface form .field,
+.backface form .field {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
 }
 
-
-/* login and register page */
-.wrapper{
-    margin-top: 6%;
-    max-width: 390px;
-    background: #fff;
-    padding: 30px;
-    width: 390px;
-    box-shadow: 0px 15px 20ps rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+.frontface form .field input,
+.backface form .field input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding-left: 15px;
+  font-size: 17px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  transition: all 0.4s ease;
+}
+.frontface form .field input:focus,
+.backface form .field input:focus {
+  border-color: #fc83bb;
+}
+.frontface form .link,
+.backface form .link {
+  margin-top: 5px;
 }
 
-.wrapper .title-text{
-    display: flex;
-    width: 200%;
-}
-
-.wrapper .title-text .title{
-    width: 50%;
-    font-size: 35px;
-    font-weight: 600;
-    text-align: center;
-}
-
-.wrapper .form-contianer{
-    width: 100%;
-    overflow: hidden;
-}
-
-.form-contianer .frontface{
-    display: flex;
-}
-
-.form-contianer .frontface form{
-    width: 50%;
-}
-
-.frontface form .field{
-    height: 50px;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.frontface form .field input{
-    width: 100%;
-    height: 100%;
-    outline: none;
-    padding-left: 15px;
-    font-size: 17px;
-    border-radius: 5px;
-    border: 1px solid lightgrey;
-    border-bottom-width: 2px;
-    transition: all 0.4s ease;
-}
-.frontface form .field input:focus{
-border-color: #fc83bb;
-}
-.frontface form .link{
-    margin-top: 5px;
-}
-
-.frontface form .signup-link
-{
-    text-align: center;
-    margin-top: 30px;
+.frontface form .signup-link,
+.backface form .signup-link {
+  text-align: center;
+  margin-top: 30px;
 }
 
 .frontface form .link a,
-.frontface form .signup-link a{
-    color: #048BA8;
-    text-decoration: none;
+.frontface form .signup-link a,
+.backface form .link a,
+.backface form .signup-link a {
+  color: #048ba8;
+  text-decoration: none;
 }
 
 .frontface form .link a:hover,
-.frontface form .signup-link a:hover{
-    text-decoration: underline;
+.frontface form .signup-link a:hover,
+.backface form .link a:hover,
+.backface form .signup-link a:hover {
+  text-decoration: underline;
 }
 
-form .field input[type="submit"]{
-    background-image: url(../images/Blue_to_purple_gradient_header.png);
-    color: #fff;
-    font-size: 20px;
-    font-weight: 700;
-    padding-left: 0px;
-    border: none;
-    cursor: pointer;
+form .field input[type="submit"] {
+  background-image: url(../images/Blue_to_purple_gradient_header.png);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 0px;
+  border: none;
+  cursor: pointer;
 }
 
-#names{
-    display: flex;
-    flex-direction: row;
-} 
-
-
-
-
-
-
-
-
-
-
+#names {
+  display: flex;
+  flex-direction: row;
+}

@@ -20,7 +20,7 @@
     <title>Anish Shrestha - Under Graduate IT Student</title>
 </head>
 
-<body>
+<body id="body">
     <!-- A navigation bar that slides from the right side of the web page. -->
     <aside class="sideBar" id="sideBar">
         <a href="javascript:void(0)" class="close" onclick="closeNav()">&times;</a>
@@ -86,55 +86,58 @@
         <span
             style="font-size: 36px; display: inline; float: left; color:rgb(255, 255, 255); align-content: left; cursor: pointer; top: 0; margin: 0.6rem 0 0 1rem;"
             onclick="openNav()">&#9776;</span>
-        <!-- <p style="display: inline; float: right; margin: 0.8rem 1rem 0 0; color: white;"><i class="far fa-user">Lakhan
-                Thapa</i></p> -->
+
         <div class="user-menu">
-            <ul>
-                <li class="user">
-                    <i class="fas fa-user"></i>
-                    <span onclick="checkBox()">Lakhan Thapa</span>
-                </li>
-
-                <li class="dropdown" id="dropdown">
-                    <ul>
-                        <li class="dropdown-menu">
-                            <a href="accountSettings.html">
-                                <i class="fas fa-user"></i>
-                                <span>My Profile</span>
-                            </a>
-                        </li>
-
-                        <li class="dropdown-menu">
-                            <hr>
-                        </li>
-        
-                        <li class="dropdown-menu">
-                            <a href="accountSettings.html">
-                                <i class="fas fa-cog"></i>
-                                <span>Account Settings</span>
-                            </a>
-                        </li>
-
-                        <li class="dropdown-menu">
-                            <hr>
-                        </li>
-        
-                        <li class="dropdown-menu">
-                            <a href="accountSettings.html">
-                                <i class="fas fa-sign-out"></i>
-                                <span>Log Out</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+            <p class="user">
+                <i class="fas fa-user"></i>
+                <span onclick="dropdown()">Lakhan Thapa</span>
+            </p>
         </div>
 
     </div>
 
+    <div id="dropdown">
+        <div class="user-intro">
+            <span>Lakhan Thapa</span>
+
+            <p>Kupondole Mart</p>
+        </div>
+        <hr>
+
+        <ul>
+            <li class="dropdown-menu">
+                <a href="accountSettings.html">
+                    <i class="fas fa-user"></i>
+                    <span>My Profile</span>
+                </a>
+            </li>
+
+            <li class="dropdown-menu">
+                <hr>
+            </li>
+
+            <li class="dropdown-menu">
+                <a href="accountSettings.html">
+                    <i class="fas fa-cog"></i>
+                    <span>Account Settings</span>
+                </a>
+            </li>
+
+            <li class="dropdown-menu">
+                <hr>
+            </li>
+
+            <li class="dropdown-menu">
+                <a href="accountSettings.html">
+                    <i class="fas fa-sign-out"></i>
+                    <span>Sign Out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 
     <div id="main">
-        <p>hello</p>
+        <p>hello</p> 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Distinctio culpa unde tempore enim! Accusantium veniam et
             perferendis unde iste nisi fugiat
