@@ -12,6 +12,15 @@ function closeNav() {
     document.body.style.backgroundColor = "#fcfcfc";            //changes the background color of body back to normal.
 }
 
+function checkBox() {
+    document.getElementById("dropdown-action").style.checked="unchecked";
+    if (dropdown-action.style.checked == "checked") {
+        document.getElementById("dropdown-action").style.checked="unchecked";
+    } else {
+        document.getElementById("dropdown-action").style.checked="checked";
+    }
+}
+
 // validateForm() is called when the form gets submitted and this function gets all the values from the fields and put them in the variables. 
 function validateForm() {
     var fName = document.forms["queryForm"]["fName"].value;
