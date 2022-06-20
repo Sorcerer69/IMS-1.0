@@ -5,6 +5,9 @@ body {
   /* transition: background-color .5s; */
   margin: 0px 0px;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 /* Stylesheet for sliding navigation bar.  */
@@ -113,8 +116,36 @@ ul {
   color: rgb(175, 175, 175);
 }
 
+.openSideNav .user-menu .user .profile-image,
+ .dropdown .user-intro .profile-image{
+  display: block;
+  width: 45px;
+  height: 44px;
+  background-color: #222533;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 5px;
+  margin-top: -2px;
+}
+.dropdown .user-intro .profile-image{
+  display: block;
+  width: 50px;
+  height: 49px;
+  background-color: #222533;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 5px;
+
+}
+.openSideNav .user-menu .user .profile-image img,
+.dropdown .user-intro .profile-image img{
+  width: 100%;
+  height: 100%; 
+  margin: 0;
+  padding: 0;
+}
 .user {
-  display: inline;
+  display: flex;
   float: right;
   margin: 1rem 1rem 0 0;
   padding: auto 1rem auto 0;
@@ -136,7 +167,7 @@ ul {
 
 .dropdown-menu a {
   text-decoration: none;
-  color: white;
+  color: #3e6990;
 }
 
 .dropdown-menu a i {
@@ -144,37 +175,83 @@ ul {
 }
 
 hr {
-  color: white;
+  color: #3e6990;
   background-color: white;
   height: 0px;
 }
 
 #dropdown {
-  display: none;
-  background-color: red;
-  width: 19%;
+  /* display: none; */
+  background-color: white;
+  width: 17%;
   z-index: 1;
   position: absolute;
   top: 69px;
   right: 1.1rem;
-  /* width: 16px;
+  border-radius: 2%;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown::before{
+  content: "";
+  width: 16px;
   height: 16px;
-  background-color: red;
+  background-color: white;
   border-top-left-radius: 3px;
   position: absolute;
   top: -8px;
-  right: 19px;
-  transform: rotate(45deg); */
+  right: 18px;
+  transform: rotate(45deg);
+}
+.dropdown .user-intro{
+  display: flex;
+
+}
+.dropdown .user-info{
+  display: flex;
+  padding: 20px;
+  color: #3e6990;
+  flex-direction: column;
+
+}
+.dropdown .user-intro .profile-image{
+  display:flex;
+  margin: 19px 0 0 15px;
+}
+
+.dropdown .user-intro span{
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: -15px;
+  margin-left: -15px;
+}
+
+.dropdown .user-intro p {
+  font-size: 12px;
+  margin-left: -15px;
+  font-weight: 100;
 }
 
 #dropdown ul {
   left: 0;
 }
+#dropdown ul li{
+  margin-bottom: 8px;
+  margin-left: -18px;
+}
 
-#dropdown .user-intro {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
+.edit-profile{
+  color: #fff;
+  background: #3e6990;
+  width: 85%;
+  font-size: 14px;
+  height: 30px;
+  text-align: center;
+  padding-top: 6px;
+  border-radius: 0.5rem;
+  margin-left: 20px;
+  margin-top: -8px;
+  margin-bottom: 30px;
 }
 
 span:hover,
@@ -187,7 +264,7 @@ i:hover {
   padding: 0px 0px 0px 0px;
   margin: 0px 0px;
   margin: 100px 20px 20px 20px;
-  padding: 10px 30px;
+  padding-left: 15px;
 }
 
 center {

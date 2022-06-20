@@ -8,8 +8,9 @@ function openNav() {
 // Closes the side navigation bar bar by setting its width to zero.
 function closeNav() {
   document.getElementById("sideBar").style.width = "0"; //sets the width of sidenav to 0(hides the side navigation bar).
-  document.getElementById("main").style.marginLeft = "50px"; //sets the right margin of main to 0.
+  document.getElementById("main").style.marginLeft = "20px"; //sets the right margin of main to 0.
   document.body.style.backgroundColor = "#fcfcfc"; //changes the background color of body back to normal.
+   
 }
 
 function checkBox() {
@@ -37,6 +38,17 @@ function dropdown() {
   }
 }
 
+function closeDropdown(){
+    document.getElementById("dropdown").style.display="none";
+    document.getElementById("sideBar").style.width = "0"; //sets the width of sidenav to 0(hides the side navigation bar).
+    document.body.style.backgroundColor = "#fcfcfc"; //changes the background color of body back to normal.
+
+    var main = document.getElementById("main")
+  if (main.style.marginLeft != "20px") {
+    main.style.marginLeft="20px"
+  }
+
+}
 // validateForm() is called when the form gets submitted and this function gets all the values from the fields and put them in the variables.
 function validateForm() {
   var fName = document.forms["queryForm"]["fName"].value;
