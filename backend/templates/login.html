@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,15 +11,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- External CSS and JS link.  -->
-    <link rel="stylesheet" type="text/css" href="../style.css">
-    <script src="../main.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/main.js' %}"></script>
     <!-- Adding Icon library to the webpage. -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' %}"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <title>Anish Shrestha - Under Graduate IT Student</title>
+    <title>login</title>
 
     <style>
         * {
@@ -44,7 +44,8 @@
     
             <div class="form-container" id="frontface">
                 <div class="frontface" id="front">
-                    <form action="post" class="login">
+                    <form action="" class="login" method="post">
+                        {% csrf_token %}
                         <div class="field">
                             <input type="text" placeholder="Username" name="username" required>
                         </div>
@@ -57,12 +58,13 @@
                         <div class="field">
                             <input type="submit" value="Sign In">
                         </div>
-                        <div class="signup-link">Not a member? <a href="#" onclick="popUp()">Signup now</a></div>
+                        <div class="signup-link">Not a member? <a href="#" onclick="signUp()">Signup now</a></div>
                     </form>
                 </div>
             </div>
             <div class="backface" id="backface">
-                <form action="post" class="login">
+                <form action="" class="login" method="post">
+                    {% csrf_token %}
                     <div class="field" id="names">
                         <input type="text" placeholder="First name" name="first_name" required style="margin-right: 10px;">
                         <input type="text" placeholder="Last name" name="last_name" required>
@@ -86,14 +88,14 @@
                         <input type="password" placeholder="Confirm Password" name="password" required>
                     </div>
                     <div class="field">
-                        <input type="submit" value="Sign Up" onclick="popUp()">
+                        <input type="submit" value="Sign Up" onclick="toogle()">
                     </div>
                     <div class="signup-link">Already a member? <a href="#" onclick="signIn()">Signin</a></div>
                 </form>
-                <div class="popup"></div>
             </div>
         </div>
     </div>
+
 
 </body>
 
