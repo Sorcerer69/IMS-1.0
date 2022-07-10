@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Dashboard</title>
+    <title>{{ title }}</title>
 </head>
 
 <body id="body">
@@ -33,7 +33,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="pages/products.html" class="nav-link">
+                <a href="{% url 'route:products' %}" class="nav-link">
                     <i class="fas fa-box"></i>
                     <span>Products</span>
                 </a>
@@ -149,47 +149,9 @@
     </div>
 
     <div id="main">
-        <p>hello</p> 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Distinctio culpa unde tempore enim! Accusantium veniam et
-            perferendis unde iste nisi fugiat
-            earum vero tempora, in omnis quibusdam, ea non error.</p>
-
-        <h1>hahuahsuah</h1>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Distinctio culpa unde tempore enim! Accusantium veniam et
-            perferendis unde iste nisi fugiat
-            earum vero tempora, in omnis quibusdam, ea non error.</p>
-
-        <h1>hahuahsuah</h1>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Distinctio culpa unde tempore enim! Accusantium veniam et
-            perferendis unde iste nisi fugiat
-            earum vero tempora, in omnis quibusdam, ea non error.</p>
-
-        <h1>hahuahsuah</h1>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Distinctio culpa unde tempore enim! Accusantium veniam et
-            perferendis unde iste nisi fugiat
-            earum vero tempora, in omnis quibusdam, ea non error.</p>
-
-        <h1>hahuahsuah</h1>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Distinctio culpa unde tempore enim! Accusantium veniam et
-            perferendis unde iste nisi fugiat
-            earum vero tempora, in omnis quibusdam, ea non error.</p>
-
-        <h1>hahuahsuah</h1>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Distinctio culpa unde tempore enim! Accusantium veniam et
-            perferendis unde iste nisi fugiat
-            earum vero tempora, in omnis quibusdam, ea non error.</p>
-         
+        {% block content %}
+        
+        {% endblock %}
     </div>
     <script src="{% static 'js/main.js' %}"></script>
 
