@@ -20,7 +20,7 @@ def login(request):
         if user is not None:
             auth.login(request, user)
             print("user logged in")
-            return redirect('dashboard')
+            return redirect('dashboard/')
         else:
             print("user does not exists")
             return redirect('/')
@@ -33,7 +33,7 @@ def dashboard(request):
 
 
 def products(request):
-    return render(request, '../products.html', {'title': 'Products - IMS'})
+    return render(request, 'products.html', {'title': 'Products - IMS'})
 
 
 def logout(request):

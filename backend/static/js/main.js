@@ -1,3 +1,7 @@
+$(document).ready(function () { // products table
+  $('#example').DataTable();
+});
+
 // Sides in the side navigation bar by increasing its width.
 function openNav() {
   document.getElementById("sideBar").style.width = "300px"; //sets the width of sidenav to 300px.
@@ -72,6 +76,8 @@ function validateForm() {
     alert("Thank you for the query. I will reach out to you ASAP."); //The user is notified abut the submission of his query.
   }
 }
+
+
 
 
 // blur background
