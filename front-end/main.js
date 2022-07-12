@@ -1,3 +1,7 @@
+$(document).ready(function () {
+  $('#example').DataTable();
+});
+
 // Sides in the side navigation bar by increasing its width.
 function openNav() {
   document.getElementById("sideBar").style.width = "300px"; //sets the width of sidenav to 300px.

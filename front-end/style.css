@@ -408,11 +408,11 @@ form .field input[type="submit"] {
 
 /* table content */
 .content-table{
-  display: inline;
+  /* display: inline; */
   border-collapse: collapse;
   margin: auto;
-  width: 95%;
-  /* min-width: 95%; */
+  /* width: 95%; */
+  min-width: 95%;
   border-radius: 5px 5px 0 0;
   font-size: 0.9rem;
   overflow: hidden;
@@ -445,7 +445,9 @@ form .field input[type="submit"] {
 .dataTables_filter{
   /* margin: auto; */
   margin-bottom: 1.5rem;
-  margin-left: 40px
+  margin: 5px 35px 20px 35px;
+  display: flex;
+  justify-content: space-between;
 }
 /* for form in product table  */
 .add {
@@ -456,6 +458,16 @@ form .field input[type="submit"] {
   font-size: 15px;
   color: white;
   border: none;
+  width: 120px;
+}
+
+.searchBar {
+  font-size: 18px;
+}
+
+.searchBar input {
+  height: 30px;
+  /* margin-top: 50px; */
 }
 
 #product-form {
