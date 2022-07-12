@@ -449,7 +449,17 @@ form .field input[type="submit"] {
   display: flex;
   justify-content: space-between;
 }
+
+
 /* for form in product table  */
+
+#addButton {
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+}
+
+
 .add {
   border-radius: 5px;
   background-color: #3e6990;
@@ -459,6 +469,14 @@ form .field input[type="submit"] {
   color: white;
   border: none;
   width: 120px;
+}
+
+#example_filter {
+  margin-top: -28px;
+  /* position: absolute; */
+  /* top: 20px; */
+  display: flex;
+  justify-content: right;
 }
 
 .searchBar {
@@ -523,3 +541,6 @@ form .field input[type="submit"] {
   justify-content: space-evenly;
 }
 
+#example_paginate, #example_info {
+  display: none;
+}

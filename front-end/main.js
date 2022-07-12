@@ -85,10 +85,12 @@ $(document).ready(function () {
 // add form for product
 function addProduct() {
   document.getElementById("product-form").style.display="flex";
-  document.getElementById("data").style.display="none";
+  document.getElementById("example_wrapper").style.display="none";
+  document.getElementById("addButton").style.display="none";
 }
 
 function closeAddMenu() {
   document.getElementById("product-form").style.display="none";
-  document.getElementById("data").style.display="inline";
+  document.getElementById("addButton").style.display="flex";
+  document.getElementById("example_wrapper").style.display="inline";
 }
