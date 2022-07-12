@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap");
 
-body {
-  background-color: #fcfcfc;
+* {
+  /* background-color: #fcfcfc; */
   /* transition: background-color .5s; */
-  margin: 0px 0px;
+  /* margin: 0px 0px; */
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   padding: 0;
@@ -94,11 +94,9 @@ ul {
 .openSideNav {
   background-color: #3e6990;
   overflow: auto;
-  margin-top: 0;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
   padding-bottom: 5px;
-  position: fixed;
-  top: 0;
   height: 4rem;
   width: 100%;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 40%), 0 6px 20px 0 rgb(0 0 0 / 39%);
@@ -261,12 +259,10 @@ i:hover {
 
 #main {
   transition: margin-left 0.3s ease-out;
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px;
-  margin: 100px 20px 20px 20px;
+  margin: 40px 20px 20px 20px;
   padding-left: 15px;
-}
 
+}
 center {
   margin: 0;
   background-color: rgb(19, 18, 18);
@@ -295,14 +291,8 @@ center {
   height: 100vh;
   width: 100%;
   place-items: center; 
-  background-image: url(../images/Blue_to_purple_gradient_header.png);
   background-repeat: no-repeat;
   background-size: cover;
-}
-.main-container#blur.active{
-  filter: blur(20px);
-  user-select: none;
-  pointer-events: none;
 }
 .wrapper {
   margin-top: 1%;
@@ -414,3 +404,110 @@ form .field input[type="submit"] {
   display: flex;
   flex-direction: row;
 }
+
+
+/* table content */
+.content-table{
+  display: inline;
+  border-collapse: collapse;
+  margin: auto;
+  width: 95%;
+  /* min-width: 95%; */
+  border-radius: 5px 5px 0 0;
+  font-size: 0.9rem;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.content-table thead tr{
+  background-color: #3e6990;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td{
+  padding: 12px 15px;
+}
+
+.content-table tbody tr{
+  border-bottom: 1px solid #dddddd ;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type{
+  border-bottom: 2px solid #3e6990;
+}
+
+.dataTables_filter{
+  /* margin: auto; */
+  margin-bottom: 1.5rem;
+  margin-left: 40px
+}
+/* for form in product table  */
+.add {
+  border-radius: 5px;
+  background-color: #3e6990;
+  height: 40px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: white;
+  border: none;
+}
+
+#product-form {
+  width: 23%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin: auto;
+  background-color:rgb(245, 243, 243);
+  display: none;
+  /* z-index: 1;
+  position: absolute; */
+
+}
+
+.add-field {
+  height: 30px;
+  margin-top: 10px;
+  display: flex;
+  margin-bottom: 40px;
+
+}
+
+.add-field input {
+  height: 100%;
+  font-size: 17px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  transition: all 0.4s ease;
+  width: 65%;
+  margin-right: 20px;
+}
+
+.add-field label {
+  text-indent: 10px;
+  margin-right: 20px;
+  width: 30%;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #3e6990;
+}
+
+.add-button {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-evenly;
+}
+

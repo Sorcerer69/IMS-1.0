@@ -74,9 +74,17 @@ function validateForm() {
 }
 
 
-// blur background
-function toggle(){
-  var blur = document.getElementById('blur');
-  blur.classList.toggle('active')
+$(document).ready(function () {
+  $('#example').DataTable();
+});
+
+// add form for product
+function addProduct() {
+  document.getElementById("product-form").style.display="flex";
+  document.getElementById("data").style.display="none";
 }
 
+function closeAddMenu() {
+  document.getElementById("product-form").style.display="none";
+  document.getElementById("data").style.display="inline";
+}

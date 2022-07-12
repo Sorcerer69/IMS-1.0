@@ -78,10 +78,6 @@ function validateForm() {
 }
 
 
-
-
-// blur background
-function toggle(){
-  var blur = document.getElementById('blur');
-  blur.classList.toggle('active')
-}
+$(document).ready(function () {
+  $('#example').DataTable();
+});
