@@ -402,6 +402,15 @@ form .field input[type="submit"] {
   flex-direction: row;
 }
 
+.table-data{
+  width: 50%;
+  background-color: red;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 18px;
+}
 
 /* table content */
 .content-table{

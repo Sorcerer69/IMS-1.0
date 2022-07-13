@@ -15,14 +15,26 @@ def login(request):
         username = request.POST['username']
         password = request.POST['password']
 
-        user = auth.authenticate(username=username, password=password)
+        users = auth.authenticate(username=username, password=password)
+        # dbUser = request.user.username
+        # dbPassword = request.user.password1
 
-        if user is not None:
-            auth.login(request, user)
-            print("user logged in")
+        # userName= auth.authenticqate(username=username)
+        # password= auth.authenticqate(password=password)
+
+        if users is not None:
+            auth.login(request, users)
+            messages.error(request, "Welcome to IMS Dashboard :)")
             return redirect('dashboard/')
+        # elif username != dbUser:
+        #     messages.error(request, "The user doesn't exit!")
+        #     return redirect('/')
+        # elif password != dbPassword:
+        #     messages.error(request, "The password is incorrect")
+        #     return redirect('/')
         else:
             print("user does not exists")
+            messages.error(request, "Invalid user or password!")
             return redirect('/')
     else:
         return render(request, 'login.html')
