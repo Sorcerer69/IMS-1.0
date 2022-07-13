@@ -52,6 +52,10 @@
                         <div class="field">
                             <input type="password" placeholder="Password" name="password" required>
                         </div>
+                        {% for message in messages %}
+                        <span class="errorMessage" style="color: red;
+                            font-size: 13px; margin-top:5px;"> {{ message }} </span>
+                        {% endfor %}
                         <div class="link">
                             <a href="#">Forgot password?</a>
                         </div>
