@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" />
+    
     <title>{{ title }}</title>
 </head>
 
@@ -111,9 +114,9 @@
         
        <div class="edit-profile"> <i class="fas fa-pen"></i> Edit profile</div>
 
-        <div class="dropdown-list">
+        <div class="profile-list">
             <ul>
-                <li class="dropdown-menu">
+                <li class="profile-menu">
                     <a href="accountSettings.html">
                         <i class="fas fa-user"></i>
                         <span>Account</span>
@@ -124,7 +127,7 @@
                     <hr>
                 </li>
      -->
-                <li class="dropdown-menu">
+                <li class="profile-menu">
                     <a href="accountSettings.html">
                         <i class="fas fa-cog"></i>
                         <span>Settings</span>
@@ -135,7 +138,7 @@
                     <hr>
                 </li> -->
     
-                <li class="dropdown-menu">
+                <li class="profile-menu">
                     <a href="../logout">
                         <i class="fas fa-sign-out"></i>
                         <span>Sign Out</span>
@@ -148,7 +151,7 @@
        
     </div>
 
-    <div id="main">
+    <div id="main"onclick="closeDropdown()">
         {% block content %}
         
         {% endblock %}

@@ -1,4 +1,4 @@
-$(document).ready(function () { // products table
+$(document).ready(function () {
   $('#example').DataTable();
 });
 
@@ -81,3 +81,16 @@ function validateForm() {
 $(document).ready(function () {
   $('#example').DataTable();
 });
+
+// add form for product
+function addProduct() {
+  document.getElementById("product-form").style.display="flex";
+  document.getElementById("example_wrapper").style.display="none";
+  document.getElementById("addButton").style.display="none";
+}
+
+function closeAddMenu() {
+  document.getElementById("product-form").style.display="none";
+  document.getElementById("addButton").style.display="flex";
+  document.getElementById("example_wrapper").style.display="inline";
+}
