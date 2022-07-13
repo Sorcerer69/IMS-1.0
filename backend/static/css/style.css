@@ -157,18 +157,18 @@ ul {
   font-size: 22px;
 }
 
-.dropdown-menu {
+.profile-menu {
   list-style: none;
   font-size: 17px;
   left: 0;
 }
 
-.dropdown-menu a {
+.profile-menu a {
   text-decoration: none;
   color: #3e6990;
 }
 
-.dropdown-menu a i {
+.profile-menu a i {
   width: 20px;
 }
 
@@ -203,7 +203,6 @@ hr {
 }
 .dropdown .user-intro{
   display: flex;
-
 }
 .dropdown .user-info{
   display: flex;
@@ -220,7 +219,6 @@ hr {
 .dropdown .user-intro span{
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: -15px;
   margin-left: -15px;
 }
 
@@ -229,13 +227,13 @@ hr {
   margin-left: -15px;
   font-weight: 100;
 }
-
-#dropdown ul {
+/* #dropdown ul {
   left: 0;
-}
+  /* display: block; */
 #dropdown ul li{
   margin-bottom: 8px;
-  margin-left: -18px;
+  margin-left: 18px;
+  /* display: block; */
 }
 
 .edit-profile{
@@ -243,13 +241,13 @@ hr {
   background: #3e6990;
   width: 85%;
   font-size: 14px;
-  height: 30px;
+  height: 35px;
   text-align: center;
   padding-top: 6px;
   border-radius: 0.5rem;
   margin-left: 20px;
   margin-top: -8px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 span:hover,
@@ -259,11 +257,9 @@ i:hover {
 
 #main {
   transition: margin-left 0.3s ease-out;
-  margin: 0px 0px;
   margin: 40px 20px 20px 20px;
   padding-left: 15px;
 }
-
 center {
   margin: 0;
   background-color: rgb(19, 18, 18);
@@ -294,11 +290,6 @@ center {
   place-items: center; 
   background-repeat: no-repeat;
   background-size: cover;
-}
-.main-container#blur.active{
-  filter: blur(20px);
-  user-select: none;
-  pointer-events: none;
 }
 .wrapper {
   margin-top: 1%;
@@ -419,4 +410,144 @@ form .field input[type="submit"] {
 .errorMessage {
   color: red;
   font-size: 18px;
+}
+
+/* table content */
+.content-table{
+  /* display: inline; */
+  border-collapse: collapse;
+  margin: auto;
+  /* width: 95%; */
+  min-width: 95%;
+  border-radius: 5px 5px 0 0;
+  font-size: 0.9rem;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.content-table thead tr{
+  background-color: #3e6990;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td{
+  padding: 12px 15px;
+}
+
+.content-table tbody tr{
+  border-bottom: 1px solid #dddddd ;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type{
+  border-bottom: 2px solid #3e6990;
+}
+
+.dataTables_filter{
+  /* margin: auto; */
+  margin-bottom: 1.5rem;
+  margin: 5px 35px 20px 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* for form in product table  */
+
+#addButton {
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+}
+
+
+.add {
+  border-radius: 5px;
+  background-color: #3e6990;
+  height: 40px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: white;
+  border: none;
+  width: 120px;
+}
+
+#example_filter {
+  margin-top: -28px;
+  /* position: absolute; */
+  /* top: 20px; */
+  margin-right: 0;
+  display: flex;
+  justify-content: right;
+}
+
+.searchBar {
+  font-size: 18px;
+}
+
+.searchBar input {
+  height: 30px;
+  /* margin-top: 50px; */
+}
+
+#product-form {
+  width: 23%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin: auto;
+  background-color:rgb(245, 243, 243);
+  display: none;
+  /* z-index: 1;
+  position: absolute; */
+
+}
+
+.add-field {
+  height: 30px;
+  margin-top: 10px;
+  display: flex;
+  margin-bottom: 40px;
+
+}
+
+.add-field input {
+  height: 100%;
+  font-size: 17px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  transition: all 0.4s ease;
+  width: 65%;
+  margin-right: 20px;
+}
+
+.add-field label {
+  text-indent: 10px;
+  margin-right: 20px;
+  width: 30%;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #3e6990;
+}
+
+.add-button {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-evenly;
+}
+
+#example_paginate, #example_info {
+  display: none;
 }

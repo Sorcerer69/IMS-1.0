@@ -156,7 +156,7 @@ ul {
   font-size: 22px;
 }
 
-.dropdown-menu {
+.profile-menu {
   list-style: none;
   font-size: 17px;
   left: 0;
@@ -182,12 +182,13 @@ ul {
   border-radius: 0.25rem;
 } */
 
-.dropdown-menu a {
+.dropdown-menu a, {
+.profile-menu a {
   text-decoration: none;
   color: #3e6990;
 }
 
-.dropdown-menu a i {
+.profile-menu a i {
   width: 20px;
 }
 
@@ -238,7 +239,6 @@ hr {
 .dropdown .user-intro span {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: -15px;
   margin-left: -15px;
 }
 
@@ -247,13 +247,15 @@ hr {
   margin-left: -15px;
   font-weight: 100;
 }
-
-#dropdown ul {
+/* #dropdown ul {
   left: 0;
 }
 #dropdown ul li {
+  /* display: block; */
+#dropdown ul li{
   margin-bottom: 8px;
-  margin-left: -18px;
+  margin-left: 18px;
+  /* display: block; */
 }
 
 .edit-profile {
@@ -261,13 +263,13 @@ hr {
   background: #3e6990;
   width: 85%;
   font-size: 14px;
-  height: 30px;
+  height: 35px;
   text-align: center;
   padding-top: 6px;
   border-radius: 0.5rem;
   margin-left: 20px;
   margin-top: -8px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 span:hover,
@@ -489,6 +491,7 @@ form .field input[type="submit"] {
   margin-top: -28px;
   /* position: absolute; */
   /* top: 20px; */
+  margin-right: 0;
   display: flex;
   justify-content: right;
 }

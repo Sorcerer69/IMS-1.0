@@ -45,7 +45,15 @@ def dashboard(request):
 
 
 def products(request):
-    return render(request, 'products.html', {'title': 'Products - IMS'})
+    if request.method == "POST":
+        name = request.POST["name"]
+        price = request.POST["price"]
+        quantity = request.POST["quantity"]
+        supplier = request.POST["supplier_ID"]
+        
+
+    else:
+        return render(request, 'products.html', {'title': 'Products - IMS'})
 
 
 def logout(request):
